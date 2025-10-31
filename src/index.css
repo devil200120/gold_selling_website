@@ -1,0 +1,374 @@
+@import "tailwindcss";
+.navbar {
+  /* width: 100%; */
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background-color: #fff;
+  border-bottom: 2px solid #d1b469;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Left Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-weight: 500;
+}
+
+.nav-menu li {
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-menu li.active {
+  color: #d1b469;
+  font-weight: 600;
+}
+
+.nav-menu li:hover {
+  color: #d1b469;
+}
+
+/* Center Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #222;
+}
+
+.logo-icon {
+  color: #d1b469;
+  font-size: 24px;
+}
+
+/* Right Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  position: relative;
+}
+
+.icon-badge {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: #d1b469;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .nav-menu {
+    display: none;
+  }
+}
+
+/* hero section  */
+/* 
+/* for banner  */
+.dual-banner {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* Each Banner */
+.banner {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  min-height: 500px;
+}
+
+.left-banner {
+  background: linear-gradient(90deg, #f5e7d4 10%, #fff 70%);
+}
+
+.right-banner {
+  background: linear-gradient(90deg, #fff 30%, #f8ecd9 90%);
+}
+
+/* Text Content */
+.banner-content {
+  flex: 1;
+  max-width: 400px;
+}
+
+.sub-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #8b6b39;
+  margin-bottom: 10px;
+}
+
+.banner-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.banner-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.shop-btn {
+  padding: 12px 28px;
+  background: #fff;
+  color: #000;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background: #d1b469;
+  color: #fff;
+  border-color: #d1b469;
+}
+
+/* Image Section */
+.banner-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-image img {
+  width: 80%;
+  max-width: 400px;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner-image img {
+    width: 60%;
+    margin-top: 30px;
+  }
+}
+
+/* about page  */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  padding: 100px 8%;
+  min-height: 100vh;
+  gap: 40px;
+}
+
+/* Left Text Section */
+.about-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.about-content h2 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #d1b469;
+  margin-bottom: 10px;
+}
+
+.about-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* Signature */
+.about-signature {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.signature {
+  width: 150px;
+  filter: brightness(0) invert(1);
+}
+
+.about-signature p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #aaa;
+}
+
+/* Right Image Section */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .about-content h1 {
+    font-size: 36px;
+  }
+
+  .about-image img {
+    width: 80%;
+  }
+}
+
+/* video */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 2%;
+  background-color: #fffdf7; /* soft white-gold tone */
+}
+
+.banner-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.sub-title {
+  color: #c99a00; /* gold color */
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.banner-title {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.banner-text {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.shop-btn {
+  background: linear-gradient(90deg, #c99a00, #f5d76e);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background: linear-gradient(90deg, #f5d76e, #c99a00);
+  transform: scale(1.05);
+}
+
+.banner-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-image video {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(201, 154, 0, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.banner-image video:hover {
+  transform: scale(1.02);
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 992px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-content {
+    max-width: 100%;
+  }
+
+  .banner-image video {
+    height: 300px;
+  }
+}
