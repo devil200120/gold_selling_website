@@ -372,3 +372,256 @@
     height: 300px;
   }
 }
+
+/* 🎯 Bounce & Flip Animations - Slower & Smoother */
+
+/* Bounce Up - Spring bounce effect */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(80px);
+  animation: none;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  animation: bounceUp 1.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes bounceUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Elastic Fade - Elastic entrance */
+.fade-in {
+  opacity: 0;
+  transform: scale(0.3);
+}
+
+.fade-in.visible {
+  animation: elasticFade 1.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  opacity: 1;
+  transform: scale(1);
+}
+
+@keyframes elasticFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Flip In from Left - 3D card flip */
+.slide-left {
+  opacity: 0;
+  transform: perspective(1000px) rotateY(-90deg);
+  transform-origin: left center;
+}
+
+.slide-left.visible {
+  animation: flipInLeft 2s ease-out;
+  opacity: 1;
+  transform: perspective(1000px) rotateY(0);
+}
+
+@keyframes flipInLeft {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateY(-90deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(0);
+  }
+}
+
+/* Flip In from Right - 3D card flip */
+.slide-right {
+  opacity: 0;
+  transform: perspective(1000px) rotateY(90deg);
+  transform-origin: right center;
+}
+
+.slide-right.visible {
+  animation: flipInRight 2s ease-out;
+  opacity: 1;
+  transform: perspective(1000px) rotateY(0);
+}
+
+@keyframes flipInRight {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateY(90deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(0);
+  }
+}
+
+/* Pop & Rotate - Spin entrance */
+.scale-up {
+  opacity: 0;
+  transform: scale(0) rotate(-180deg);
+}
+
+.scale-up.visible {
+  animation: popRotate 1.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+@keyframes popRotate {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-180deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  /* Simpler animations for mobile */
+  .slide-left,
+  .slide-right {
+    transform: translateY(50px);
+  }
+
+  .slide-left.visible,
+  .slide-right.visible {
+    animation: simpleBounce 1.5s ease-out;
+  }
+
+  @keyframes simpleBounce {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* 🎊 Success Animation Styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-10deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes confetti {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-150px) scale(0) rotate(360deg);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.animate-bounceIn {
+  animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-confetti {
+  animation: confetti 1.5s ease-out forwards;
+}

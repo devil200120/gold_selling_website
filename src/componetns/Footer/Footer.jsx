@@ -7,8 +7,11 @@ import {
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import footer_bg_img from "../../assets/footer_bg_img.png";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 const Footer = () => {
+  useScrollAnimation();
+
   return (
     <footer
       className="relative text-gray-100 pt-16 pb-10 overflow-hidden"
@@ -31,9 +34,13 @@ const Footer = () => {
         {/* Tagline */}
         <p className="text-base md:text-lg text-gray-300 max-w-2xl leading-relaxed">
           Trusted by thousands across Bangalore, South Gold Company ensures
-          <span className="text-yellow-400 font-medium"> purity, transparency, </span>
-          and <span className="text-yellow-400 font-medium">fair value</span> in every gold transaction.
-          Experience seamless service with <span className="font-semibold text-yellow-400">integrity</span> and{" "}
+          <span className="text-yellow-400 font-medium">
+            {" "}
+            purity, transparency,{" "}
+          </span>
+          and <span className="text-yellow-400 font-medium">fair value</span> in
+          every gold transaction. Experience seamless service with{" "}
+          <span className="font-semibold text-yellow-400">integrity</span> and{" "}
           <span className="font-semibold text-yellow-400">trust</span>.
         </p>
 
@@ -86,15 +93,17 @@ const Footer = () => {
 
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-5 mt-6">
-          {[FaFacebookF, FaInstagram, FaTwitter, FaPinterest].map((Icon, idx) => (
-            <a
-              key={idx}
-              href="#"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-yellow-500/80 text-white backdrop-blur-md border border-yellow-400/30 transition-transform duration-300 hover:scale-110 shadow-md"
-            >
-              <Icon className="text-lg" />
-            </a>
-          ))}
+          {[FaFacebookF, FaInstagram, FaTwitter, FaPinterest].map(
+            (Icon, idx) => (
+              <a
+                key={idx}
+                href="#"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-yellow-500/80 text-white backdrop-blur-md border border-yellow-400/30 transition-transform duration-300 hover:scale-110 shadow-md"
+              >
+                <Icon className="text-lg" />
+              </a>
+            )
+          )}
         </div>
 
         {/* Copyright */}

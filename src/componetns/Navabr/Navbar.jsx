@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { FaFacebookF, FaInstagram, FaTwitter, FaPinterestP } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaPinterestP,
+} from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
@@ -96,15 +101,25 @@ const Navbar = () => {
 
       {/* Dropdown Menu (Mobile) */}
       <div
-        className={`absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-300 ease-in-out ${
-          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-500 ease-in-out origin-top ${
+          menuOpen
+            ? "scale-y-100 opacity-100 visible"
+            : "scale-y-0 opacity-0 invisible"
         }`}
       >
-        <ul className="flex flex-col items-center py-4 space-y-4 text-gray-700 font-medium">
+        <ul className="flex flex-col items-center py-6 space-y-5 text-gray-700 font-medium">
           {["/", "/about", "/services", "/contact"].map((path, i) => {
             const labels = ["HOME", "ABOUT", "SERVICES", "CONTACT"];
             return (
-              <li key={path}>
+              <li
+                key={path}
+                className={`transition-all duration-300 ${
+                  menuOpen
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-[-10px] opacity-0"
+                }`}
+                style={{ transitionDelay: menuOpen ? `${i * 70}ms` : "0ms" }}
+              >
                 <NavLink
                   to={path}
                   onClick={closeMenu}
@@ -122,13 +137,18 @@ const Navbar = () => {
         </ul>
 
         {/* 🟡 Social Icons in Mobile Menu */}
-        <div className="flex justify-center gap-4 pb-4">
+        <div className="flex justify-center gap-4 pb-6">
           {[FaFacebookF, FaInstagram, FaTwitter, FaPinterestP].map(
             (Icon, index) => (
               <a
                 key={index}
                 href="#"
-                className="w-10 h-10 flex items-center justify-center rounded-full border border-yellow-600 text-gray-700 hover:bg-yellow-500 hover:text-white transition-all duration-300"
+                className={`w-10 h-10 flex items-center justify-center rounded-full border border-yellow-600 text-gray-700 hover:bg-yellow-500 hover:text-white transition-all duration-300 ${
+                  menuOpen ? "scale-100 opacity-100" : "scale-0 opacity-0"
+                }`}
+                style={{
+                  transitionDelay: menuOpen ? `${280 + index * 60}ms` : "0ms",
+                }}
               >
                 <Icon size={16} />
               </a>

@@ -6,8 +6,11 @@ import Footer from "../componetns/Footer/Footer";
 import About from "./About";
 import Services from "./Services";
 import Contact from "./Contact";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const Home = () => {
+  useScrollAnimation();
+
   const whatsappNumber = "918400400916";
   const message = encodeURIComponent("Hello! how can i help you.");
   const videoRef = useRef(null);
@@ -59,7 +62,7 @@ const Home = () => {
     <>
       {/* 🟡 Hero Section */}
       <section
-        className="relative flex flex-col md:flex-row items-center justify-between bg-cover bg-center bg-no-repeat min-h-screen"
+        className="relative flex flex-col md:flex-row items-center justify-between bg-cover bg-center bg-no-repeat min-h-screen pt-20 md:pt-0"
         style={{
           backgroundColor: "#1f0f1a",
           backgroundImage: `url(${image})`,
@@ -69,7 +72,7 @@ const Home = () => {
         <div className="absolute inset-0  from-amber-900/50 via-amber-800/40 to-transparent"></div>
 
         {/* 🟡 Text Content */}
-        <div className="relative z-10 px-5 sm:px-10 md:px-10 py-16 md:py-0 text-white max-w-xl ">
+        <div className="relative z-10 px-5 sm:px-10 md:px-10 py-8 md:py-0 text-white max-w-xl slide-left">
           <div className="space-y-15">
             {" "}
             <h1 className="text-3xl sm:text-5xl md:text-4xl font-extrabold ">
@@ -102,7 +105,7 @@ const Home = () => {
 
         {/* 🎥 Video Section */}
         <div
-          className="relative z-10 md:w-1/2 w-full px-8 md:px-16 flex justify-center items-center mt-10 md:mt-0"
+          className="relative z-10 md:w-1/2 w-full px-8 md:px-16 flex justify-center items-center mt-10 md:mt-0 slide-right"
           onMouseEnter={() => setShowButton(true)}
           onMouseLeave={() => setShowButton(false)}
         >

@@ -6,6 +6,7 @@ import service_img2 from "../assets/service_img2.png";
 import service_img3 from "../assets/service_img3.png";
 import service_img4 from "../assets/service_img4.png";
 import service_img5 from "../assets/service_img5.png";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const services = [
   {
@@ -59,10 +60,12 @@ const services = [
 ];
 
 export default function Services() {
+  useScrollAnimation();
+
   return (
     <section className="w-full py-16 bg-[#1f0f1a] text-gray-100">
       {/* Section Header */}
-      <div className="text-center mb-12 px-4">
+      <div className="text-center mb-12 px-4 fade-in">
         <p className="text-yellow-500 tracking-wider text-4xl font-bold mb-2">
           Our Services
         </p>
@@ -80,7 +83,7 @@ export default function Services() {
         {services.map((service, i) => (
           <div
             key={i}
-            className={`relative flex flex-col justify-center items-center text-center p-10 rounded-2xl overflow-hidden ${service.bg} ${service.span} border border-amber-700`}
+            className={`relative flex flex-col justify-center items-center text-center p-10 rounded-2xl overflow-hidden ${service.bg} ${service.span} border border-amber-700 scroll-animate`}
           >
             {/* Background Image */}
             <div

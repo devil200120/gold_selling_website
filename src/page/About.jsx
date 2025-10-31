@@ -2,20 +2,23 @@ import React from "react";
 import aboutImg from "../assets/baneer1.jpeg"; // 🟡 Replace with your actual image path
 import ringImg from "../assets/banner2.jpeg"; // optional decorative image
 import Footer from "../componetns/Footer/Footer";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const About = () => {
+  useScrollAnimation();
+
   return (
     <>
       <section className="bg-[#1f0f1a] text-gray-100">
         {/* Heading */}
-        <h1 className="text-center text-4xl font-bold pt-10 text-yellow-400 tracking-wider">
+        <h1 className="text-center text-4xl font-bold pt-10 text-yellow-400 tracking-wider fade-in">
           About
         </h1>
 
         {/* Main Container */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 flex flex-col-reverse md:flex-row items-center gap-10">
           {/* Left: Text Section */}
-          <div className="md:w-1/2 space-y-6 text-center md:text-left">
+          <div className="md:w-1/2 space-y-6 text-center md:text-left slide-left">
             <h2 className="text-4xl md:text-4xl font-bold text-yellow-400 leading-snug">
               About <span className="text-white">South Gold Company</span>
             </h2>
@@ -44,7 +47,7 @@ const About = () => {
           </div>
 
           {/* Right: Image Section */}
-          <div className="md:w-1/2 relative flex justify-center">
+          <div className="md:w-1/2 relative flex justify-center scale-up">
             <img
               src={aboutImg}
               alt="About South Gold Company"
