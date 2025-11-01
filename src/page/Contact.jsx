@@ -93,7 +93,7 @@ const Contact = () => {
                   <h4 className="text-lg font-semibold text-amber-400">
                     Email Address
                   </h4>
-                  <p className="text-gray-300">support@goldlux.com</p>
+                  <p className="text-gray-300">contact@southgoldcompany.com</p>
                 </div>
               </div>
 
@@ -101,7 +101,7 @@ const Contact = () => {
               <div className="rounded-xl overflow-hidden mt-6 border border-amber-600 shadow-lg">
                 <iframe
                   title="Google Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58937.0026!2d85.7660!3d20.2961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a7d2b9f909b1%3A0x84f259a12cb842b!2sBhubaneswar!5e0!3m2!1sen!2sin!4v1692202200000"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8674732832!2d77.6144!3d13.0515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae173c2b6b1c7d%3A0x4c5e7b5e5b5b5b5b!2sHennur%20Main%20Rd%2C%20Sait%20Palya%2C%20Bengaluru%2C%20Karnataka%20560084!5e0!3m2!1sen!2sin!4v1699000000000"
                   width="100%"
                   height="250"
                   allowFullScreen=""

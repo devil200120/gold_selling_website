@@ -2,8 +2,7 @@ import React from "react";
 import {
   FaFacebookF,
   FaInstagram,
-  FaTwitter,
-  FaPinterest,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import footer_bg_img from "../../assets/footer_bg_img.png";
@@ -93,17 +92,38 @@ const Footer = () => {
 
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-5 mt-6">
-          {[FaFacebookF, FaInstagram, FaTwitter, FaPinterest].map(
-            (Icon, idx) => (
-              <a
-                key={idx}
-                href="#"
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-yellow-500/80 text-white backdrop-blur-md border border-yellow-400/30 transition-transform duration-300 hover:scale-110 shadow-md"
-              >
-                <Icon className="text-lg" />
-              </a>
-            )
-          )}
+          {/* Facebook - Linked to your profile */}
+          <a
+            href="https://www.facebook.com/share/15xfpB7R8K/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-yellow-500/80 text-white backdrop-blur-md border border-yellow-400/30 transition-transform duration-300 hover:scale-110 shadow-md"
+            title="Follow us on Facebook"
+          >
+            <FaFacebookF className="text-lg" />
+          </a>
+          
+          {/* Instagram - Linked to your profile */}
+          <a
+            href="https://www.instagram.com/south_gold_company?igsh=ZHBkbmZ0ZGpld2d2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-yellow-500/80 text-white backdrop-blur-md border border-yellow-400/30 transition-transform duration-300 hover:scale-110 shadow-md"
+            title="Follow us on Instagram"
+          >
+            <FaInstagram className="text-lg" />
+          </a>
+          
+          {/* WhatsApp - Business contact */}
+          <a
+            href="https://wa.me/918400400916?text=Hello%20South%20Gold%20Company,%20I%20would%20like%20to%20inquire%20about%20your%20gold%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-yellow-500/80 text-white backdrop-blur-md border border-yellow-400/30 transition-transform duration-300 hover:scale-110 shadow-md"
+            title="Chat with us on WhatsApp"
+          >
+            <FaWhatsapp className="text-lg" />
+          </a>
         </div>
 
         {/* Copyright */}

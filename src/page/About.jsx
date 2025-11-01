@@ -28,7 +28,9 @@ const About = () => {
               <span className="font-semibold text-yellow-300">
                 South Gold Company
               </span>{" "}
-              — a trusted name where{" "}
+              — <span className="font-semibold text-yellow-300">
+                the first Gold Company for Gold Selling & Buying in Bangalore
+              </span>. We are a trusted name where{" "}
               <span className="font-semibold text-yellow-300">
                 purity meets value
               </span>
@@ -42,8 +44,30 @@ const About = () => {
               customer receives the best and most accurate gold rate, backed by
               trust, integrity, and professionalism. We follow a smooth,
               transparent, and legal process, offering instant evaluation,
-              honest pricing, and immediate payments.
+              honest pricing, and immediate payments. <span className="font-semibold text-yellow-300">
+                We create a very comfortable atmosphere during every transaction
+              </span>.
             </p>
+
+            {/* Additional Services */}
+            <div className="space-y-4 pt-4">
+              <div className="bg-yellow-400/10 p-4 rounded-lg border-l-4 border-yellow-400">
+                <h4 className="font-semibold text-yellow-300 mb-2">✨ New Gold Ornaments</h4>
+                <p className="text-gray-300">
+                  You can make <span className="font-semibold text-yellow-300">New Gold Ornaments</span> by giving 
+                  old Gold or jewellery with <span className="font-semibold text-yellow-300">no making charges</span> and 
+                  the wastage at just <span className="font-semibold text-yellow-300">6-8%</span>.
+                </p>
+              </div>
+
+              <div className="bg-yellow-400/10 p-4 rounded-lg border-l-4 border-yellow-400">
+                <h4 className="font-semibold text-yellow-300 mb-2">🏠 Convenient Service</h4>
+                <p className="text-gray-300">
+                  We <span className="font-semibold text-yellow-300">release your pledged Gold and pledge 
+                  at your convenient place</span>, making the entire process hassle-free and comfortable for you.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Right: Image Section */}
