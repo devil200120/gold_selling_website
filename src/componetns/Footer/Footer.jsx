@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import footer_bg_img from "../../assets/footer_bg_img.png";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
@@ -102,7 +98,7 @@ const Footer = () => {
           >
             <FaFacebookF className="text-lg" />
           </a>
-          
+
           {/* Instagram - Linked to your profile */}
           <a
             href="https://www.instagram.com/south_gold_company?igsh=ZHBkbmZ0ZGpld2d2"
@@ -113,7 +109,7 @@ const Footer = () => {
           >
             <FaInstagram className="text-lg" />
           </a>
-          
+
           {/* WhatsApp - Business contact */}
           <a
             href="https://wa.me/918400400916?text=Hello%20South%20Gold%20Company,%20I%20would%20like%20to%20inquire%20about%20your%20gold%20services."
