@@ -183,6 +183,87 @@ const Home = () => {
         </div>
       </section>
 
+      {/* 🎠 Continuous Scrolling Carousel Strip */}
+      <section className="relative py-8 bg-gradient-to-r from-[#3e1e35] via-[#1f0f1a] to-[#3e1e35] overflow-hidden border-y-2 border-amber-400/30">
+        {/* Scrolling Content Container */}
+        <div className="relative">
+          {/* First Scrolling Strip - Left to Right */}
+          <div className="flex whitespace-nowrap animate-scroll-left mb-4">
+            {/* Duplicate content for seamless loop */}
+            {[...Array(2)].map((_, index) => (
+              <div key={index} className="flex items-center">
+                <div className="flex items-center gap-8 mx-8">
+                  <div className="flex items-center gap-3 bg-white/5 backdrop-blur-sm px-6 py-3 rounded-full border border-amber-400/30">
+                    <FaGem className="text-amber-400 text-2xl" />
+                    <span className="text-white font-semibold text-lg">100% Pure Gold</span>
+                  </div>
+                  <div className="text-amber-400 text-3xl">✦</div>
+                  
+                  <div className="flex items-center gap-3 bg-white/5 backdrop-blur-sm px-6 py-3 rounded-full border border-amber-400/30">
+                    <FaStar className="text-amber-400 text-2xl" />
+                    <span className="text-white font-semibold text-lg">Best Market Rates</span>
+                  </div>
+                  <div className="text-amber-400 text-3xl">✦</div>
+                  
+                  <div className="flex items-center gap-3 bg-white/5 backdrop-blur-sm px-6 py-3 rounded-full border border-amber-400/30">
+                    <FaShieldAlt className="text-amber-400 text-2xl" />
+                    <span className="text-white font-semibold text-lg">Trusted & Secure</span>
+                  </div>
+                  <div className="text-amber-400 text-3xl">✦</div>
+                  
+                  <div className="flex items-center gap-3 bg-white/5 backdrop-blur-sm px-6 py-3 rounded-full border border-amber-400/30">
+                    <FaWhatsapp className="text-amber-400 text-2xl" />
+                    <span className="text-white font-semibold text-lg">Instant Payment</span>
+                  </div>
+                  <div className="text-amber-400 text-3xl">✦</div>
+                  
+                  <div className="flex items-center gap-3 bg-white/5 backdrop-blur-sm px-6 py-3 rounded-full border border-amber-400/30">
+                    <FaGem className="text-amber-400 text-2xl" />
+                    <span className="text-white font-semibold text-lg">No Hidden Charges</span>
+                  </div>
+                  <div className="text-amber-400 text-3xl">✦</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Second Scrolling Strip - Right to Left */}
+          <div className="flex whitespace-nowrap animate-scroll-right">
+            {/* Duplicate content for seamless loop */}
+            {[...Array(2)].map((_, index) => (
+              <div key={index} className="flex items-center">
+                <div className="flex items-center gap-8 mx-8">
+                  <div className="flex items-center gap-3 bg-amber-400/10 backdrop-blur-sm px-6 py-3 rounded-full border border-amber-400/40">
+                    <span className="text-amber-400 font-bold text-lg">500+ Happy Customers</span>
+                  </div>
+                  <div className="text-amber-400 text-3xl">★</div>
+                  
+                  <div className="flex items-center gap-3 bg-amber-400/10 backdrop-blur-sm px-6 py-3 rounded-full border border-amber-400/40">
+                    <span className="text-amber-400 font-bold text-lg">First in Bangalore</span>
+                  </div>
+                  <div className="text-amber-400 text-3xl">★</div>
+                  
+                  <div className="flex items-center gap-3 bg-amber-400/10 backdrop-blur-sm px-6 py-3 rounded-full border border-amber-400/40">
+                    <span className="text-amber-400 font-bold text-lg">Transparent Process</span>
+                  </div>
+                  <div className="text-amber-400 text-3xl">★</div>
+                  
+                  <div className="flex items-center gap-3 bg-amber-400/10 backdrop-blur-sm px-6 py-3 rounded-full border border-amber-400/40">
+                    <span className="text-amber-400 font-bold text-lg">₹1Cr+ Transactions</span>
+                  </div>
+                  <div className="text-amber-400 text-3xl">★</div>
+                  
+                  <div className="flex items-center gap-3 bg-amber-400/10 backdrop-blur-sm px-6 py-3 rounded-full border border-amber-400/40">
+                    <span className="text-amber-400 font-bold text-lg">24/7 Support</span>
+                  </div>
+                  <div className="text-amber-400 text-3xl">★</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 🔸 Other Sections */}
       <About />
       <Services />
