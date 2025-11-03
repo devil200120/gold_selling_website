@@ -269,7 +269,7 @@ const Home = () => {
       <Services />
 
       {/* 🌟 Premium Gold Experience Section */}
-      <section className="relative py-20 bg-gradient-to-b from-[#3e1e35] to-[#1f0f1a] overflow-hidden">
+      <section className="relative py-12 bg-gradient-to-b from-[#3e1e35] to-[#1f0f1a] overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute top-20 left-10 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -286,7 +286,7 @@ const Home = () => {
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-8">
             {/* Left: Video */}
             <div className="slide-left">
               <div
@@ -317,46 +317,44 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Right: Features */}
-            <div className="space-y-6 slide-right">
-              <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-amber-400/30 hover:border-amber-400/60 transition-all duration-300 transform hover:scale-105">
-                <div className="flex items-start gap-4">
-                  <div className="bg-amber-400 p-3 rounded-lg">
-                    <FaGem className="text-2xl text-black" />
+            {/* Right: Gold Ornaments Showcase */}
+            <div className="slide-right">
+              <div className="grid grid-cols-2 gap-4">
+                {/* Large featured ornament - Top */}
+                <div className="col-span-2 relative group overflow-hidden rounded-2xl shadow-2xl border-4 border-amber-400/40 hover:border-amber-400/80 transition-all duration-300">
+                  <img
+                    src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&h=500&fit=crop"
+                    alt="Exquisite Gold Jewelry"
+                    className="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <p className="text-white font-bold text-lg">Premium Gold Jewelry</p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-amber-400 mb-2">Premium Quality</h3>
-                    <p className="text-gray-300">
-                      100% certified and hallmarked gold with guaranteed purity and authenticity
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-amber-400/30 hover:border-amber-400/60 transition-all duration-300 transform hover:scale-105">
-                <div className="flex items-start gap-4">
-                  <div className="bg-amber-400 p-3 rounded-lg">
-                    <FaStar className="text-2xl text-black" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-amber-400 mb-2">Best Market Rates</h3>
-                    <p className="text-gray-300">
-                      Get the highest returns with our transparent, real-time market pricing
-                    </p>
+                  <div className="absolute top-4 right-4 bg-amber-400 text-black px-4 py-2 rounded-full font-bold text-sm">
+                    Best Rates
                   </div>
                 </div>
-              </div>
 
-              <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-amber-400/30 hover:border-amber-400/60 transition-all duration-300 transform hover:scale-105">
-                <div className="flex items-start gap-4">
-                  <div className="bg-amber-400 p-3 rounded-lg">
-                    <FaShieldAlt className="text-2xl text-black" />
+                {/* Bottom two ornaments */}
+                <div className="relative group overflow-hidden rounded-xl shadow-xl border-2 border-amber-400/30 hover:border-amber-400/60 transition-all duration-300">
+                  <img
+                    src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=300&fit=crop"
+                    alt="Gold Necklace"
+                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                    <p className="text-white font-semibold text-sm">Gold Necklaces</p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-amber-400 mb-2">Trusted & Secure</h3>
-                    <p className="text-gray-300">
-                      Safe, legal transactions with instant payment and complete documentation
-                    </p>
+                </div>
+
+                <div className="relative group overflow-hidden rounded-xl shadow-xl border-2 border-amber-400/30 hover:border-amber-400/60 transition-all duration-300">
+                  <img
+                    src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=400&h=300&fit=crop"
+                    alt="Gold Bangles"
+                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                    <p className="text-white font-semibold text-sm">Gold Bangles</p>
                   </div>
                 </div>
               </div>
